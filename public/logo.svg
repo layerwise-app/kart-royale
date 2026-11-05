@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffbe5c"/>
+      <stop offset=".5" stop-color="#f2712a"/>
+      <stop offset="1" stop-color="#8e2a3c"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf2"/>
+      <stop offset=".45" stop-color="#ffe6a6"/>
+      <stop offset="1" stop-color="#ffc23f"/>
+    </linearGradient>
+    <pattern id="chk" x="258" y="646" width="144" height="140" patternUnits="userSpaceOnUse">
+      <rect width="144" height="140" fill="#181425"/>
+      <rect width="72" height="70" fill="#f6efe0"/>
+      <rect x="72" y="70" width="72" height="70" fill="#f6efe0"/>
+    </pattern>
+    <clipPath id="tile"><rect width="1024" height="1024" rx="232"/></clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="1024" height="1024" fill="url(#sky)"/>
+    <g fill="#fff4d6" opacity=".16"><path d="M512 584 L1612.0 584.0 L1574.5 868.7 Z"/><path d="M512 584 L1464.6 1134.0 L1289.8 1361.8 Z"/><path d="M512 584 L1062.0 1536.6 L796.7 1646.5 Z"/><path d="M512 584 L512.0 1684.0 L227.3 1646.5 Z"/><path d="M512 584 L-38.0 1536.6 L-265.8 1361.8 Z"/><path d="M512 584 L-440.6 1134.0 L-550.5 868.7 Z"/><path d="M512 584 L-588.0 584.0 L-550.5 299.3 Z"/><path d="M512 584 L-440.6 34.0 L-265.8 -193.8 Z"/><path d="M512 584 L-38.0 -368.6 L227.3 -478.5 Z"/><path d="M512 584 L512.0 -516.0 L796.7 -478.5 Z"/><path d="M512 584 L1062.0 -368.6 L1289.8 -193.8 Z"/><path d="M512 584 L1464.6 34.0 L1574.5 299.3 Z"/></g>
+  </g>
+  <path d="M260 644 L188 342 L374 494 L512 260 L650 494 L836 342 L764 644 Z"
+        fill="url(#gold)" stroke="#181425" stroke-width="44" stroke-linejoin="round"/>
+  <circle cx="188" cy="342" r="50" fill="#ffe6a6" stroke="#181425" stroke-width="36"/>
+  <circle cx="512" cy="260" r="54" fill="#fffdf2" stroke="#181425" stroke-width="36"/>
+  <circle cx="836" cy="342" r="50" fill="#ffe6a6" stroke="#181425" stroke-width="36"/>
+  <rect x="236" y="624" width="552" height="184" rx="30" fill="#181425"/>
+  <rect x="258" y="646" width="504" height="140" fill="url(#chk)"/>
+</svg>

@@ -1751,6 +1751,34 @@ html[data-touch][data-touch-hand="left"] .kr .kr-pos {
   font-weight: 800;
 }
 
+/* "Make your own game with Layerwise" — a small, muted credit pinned to a
+   corner of the title screen, so it is gone the moment a race starts. With a
+   mouse it sits bottom-right; on touch it moves top-right, clear of where
+   thumbs rest and of the tap-anywhere start. The padding is a tap target, the
+   negative margin keeps it from moving the text. */
+.kr-made {
+  position: absolute;
+  z-index: 1;
+  right: calc(var(--safe-x) * 0.6 + env(safe-area-inset-right, 0px));
+  bottom: calc(var(--safe) * 0.6 + env(safe-area-inset-bottom, 0px));
+  padding: 0.7em 0.5em;
+  margin: -0.7em -0.5em;
+  font-size: clamp(10px, 1.25vmin, 13px);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(248, 242, 230, 0.5);
+  text-shadow: 0 0.1em 0.35em rgba(20, 10, 4, 0.9);
+  transition: color 0.24s var(--e-out);
+}
+.kr-made:hover,
+.kr-made:focus-visible { color: rgba(255, 226, 174, 0.92); }
+html[data-touch] .kr-made {
+  bottom: auto;
+  top: calc(var(--safe) * 0.6 + env(safe-area-inset-top, 0px));
+}
+
 /* --- headline used by select / pause / results ----------------------------- */
 
 .kr-title {

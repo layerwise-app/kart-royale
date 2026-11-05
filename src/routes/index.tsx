@@ -4,7 +4,9 @@ import { Button } from '~/components/ui/button';
 import { Separator } from '~/components/ui/separator';
 import { seo } from '~/utils/seo';
 
-const homePageTitle = 'Build full-stack web apps in minutes with Layerwise';
+const homePageTitle = 'Kart Royale — a 3D kart racer in your browser';
+const homePageDescription =
+  'Pick one of eight racers and take on seven AI rivals over three laps of Sunset Bay Circuit, with drifts, boosts and items. Plays with a keyboard, a gamepad or touch.';
 const gameStarted = { current: false };
 
 export const Route = createFileRoute('/')({
@@ -12,7 +14,7 @@ export const Route = createFileRoute('/')({
     meta: [
       ...seo({
         title: homePageTitle,
-        description: 'Get started by chatting with AI'
+        description: homePageDescription
       })
     ]
   }),

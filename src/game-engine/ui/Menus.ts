@@ -196,10 +196,11 @@ export class Menus {
 
     // Tap-anywhere confirm. A real control that was tapped handles itself via
     // its own click handler, so those are excluded to avoid confirming twice.
+    // The Layerwise link is excluded too: following it must not start a race.
     this.root.addEventListener('pointerdown', (e) => {
       if (!this.blocking) return;
       const t = e.target as HTMLElement;
-      if (t.closest('.kr-btn, .kr-card')) return;
+      if (t.closest('.kr-btn, .kr-card, .kr-made')) return;
       this.tapConfirm = true;
     });
 
@@ -430,6 +431,13 @@ export class Menus {
     this.titleHint = el('div', 'kr-hint', wrap);
     const cbtn = el('div', 'kr-btn kr-btn-controls', wrap, 'Controls');
     cbtn.onclick = (e) => { e.stopPropagation(); this.controls.show(); };
+    // A child of the screen itself, not of the scrolling `.kr-screen-in`, so it
+    // stays pinned to a corner of the title screen and leaves with it when the
+    // race starts. Placement per device is in ui.css (`.kr-made`).
+    const made = el('a', 'kr-made', s, 'Make your own game with Layerwise');
+    made.href = 'https://layerwise.app';
+    made.target = '_blank';
+    made.rel = 'noopener noreferrer';
     this.syncTouchCopy(false);
     return s;
   }
